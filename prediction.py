@@ -1,26 +1,13 @@
 import joblib
 import pandas as pd
-def predict(data):
-    clf = joblib.load("RFC_model.sav")
-    clf_limited = joblib.load("RFC_model_limited_depth.sav")
-    prediction = clf.predict_proba(data)
-    prediction_limited = clf_limited.predict_proba(data)
-    df_prob = pd.DataFrame(prediction)
-    df_prob_limited = pd.DataFrame(prediction_limited)
-    return df_prob[1]*100
 
 
-def predict_limited(data):
-    clf_limited = joblib.load("RFC_model_limited_depth.sav")
-    prediction_limited = clf_limited.predict_proba(data)
-    df_prob_limited = pd.DataFrame(prediction_limited)
-    return df_prob_limited[1]*100
 
-def predict_15Z(data):
-    clf_15Z = joblib.load("RFC_model_15Z.sav")
-    prediction_15Z = clf_15Z.predict_proba(data)
-    df_prob_15Z = pd.DataFrame(prediction_15Z)
-    return df_prob_15Z[1]*100
+def predict_15Z_offshore(data):
+    clf_15Z_offshore = joblib.load("RFC_model_15Z_offshore.sav")
+    prediction_15Z_offshore = clf_15Z_offshore.predict_proba(data)
+    df_prob_15Z_offshore = pd.DataFrame(prediction_15Z_offshore)
+    return df_prob_15Z_offshore[1]*100
 
 def predict_10Z_updated(data):
     clf_10Z = joblib.load("RFC_model_limited_depth_10Z_updated.sav")
