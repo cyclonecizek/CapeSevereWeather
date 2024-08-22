@@ -38,7 +38,7 @@ def main():
     #st.header(str(int(result[0])) + '%')
     result_15Z_offshore = predict_15Z_offshore(np.array([[Thompson_Index, RH, PWAT, WINDEX, u_wind_average_1000_850, v_wind_average_1000_850, u_wind_average_850_500, Wet_Bulb_Zero]]))  
     st.header('Severe Weather Probability: ')
-    st.header(str(int(result_10Z[0])) + '%')
+    st.header(str(int(result_15Z_offshore[0])) + '%')
 
 
 if __name__=='__main__': 
