@@ -15,7 +15,7 @@ def main():
     Thompson_Index = st.number_input('Thompson Index (KI - LI)', -30.0, 60.0, step = 0.1, format= "%.1f")
     RH = st.number_input('700-500mb Average RH', 0, 100, step=1)
     PWAT = st.number_input('PWAT (inches)', 0.00, 5.00, step = 0.01, format = "%.01f")
-    Thompson_Index = st.number_input('WINDEX', 0.0, 100.0, step = 0.1, format= "%.1f")
+    WINDEX = st.number_input('WINDEX', 0.0, 100.0, step = 0.1, format= "%.1f")
     Wet_Bulb_Zero = RH = st.number_input('Wet Bulb Zero Level (ft)', 0, 30000, step=1)
   with col2:
     #wind_average = st.slider('1000-700mb Average U-Wind Component', -40.0, 40.0, 0.5)
